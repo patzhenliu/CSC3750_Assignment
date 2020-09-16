@@ -2,8 +2,8 @@
 <!-- 
 Patricia Liu
 CSC 3750
-Assignment 1
-September 15, 2020
+Assignment 2
+September 22, 2020
 -->
 <html>
     <head>
@@ -29,18 +29,63 @@ September 15, 2020
             }
             h2 {
                 color: #d1633c;
-                font-size: 1em;
+                font-size: 1.5em;
+                text-align: center;
+                border-bottom: 1px dashed #d1633c;
+                margin-top: 40px;
+            }
+            h3 {
+                font-size: 0.95em;
             }
             img {
                 height: 400px;
             }
+            article h3 {
+                color: #d1633c;
+                margin-top: 40px;
+                font-size: 1.2em;
+            }
+            section h3 {
+                color: #000;
+                margin-top: 0px;
+                font-size: 1em;
+            }
+            dl {
+                margin-left: 2em;
+            }
+            blockquote{
+                text-align: center;
+            }
+            footer {
+                border-top: 1px dashed #d1633c;
+                margin-top: 40px;
+                text-align: center;
+            }
+            .new-item {
+                font-weight: bold;
+            }
+            .season {
+                font-style: italic;
+            }
+
         </style>
     </head>
     <body>
         <!-- Contains all the information about the business -->
         <h1><img src="charlotte.png" alt="charlotte"><br>Charlotte's Sweets Shop</h1>
 
-        <h2>About</h2>
+        <!-- Navigation for sections -->
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Recipes</li>
+                <li>Latest News</li>
+            </ul>
+        </nav>
+
+        <!-- About Section -->
+        <h2 id="home">Home</h2>
         <p>
             Charlotte's Sweets Shop was opened on December 19, 2013. Charlotte grew up in the city of
             Mitakihara, Japan. She was always <em>determined</em> and <em>worked hard</em> to get what she wanted.
@@ -51,28 +96,207 @@ September 15, 2020
             are cheese themed desserts since cheese was always Charlotte's favorite.
         </p>
         
-        <h2>Menu</h2>
+        <!-- Menu Section -->
+        <h2 id="menu">Menu</h2>
         <p>
             Charlotte's Sweets serves a variety of cheese themed dishes, with the Strawberry Cheese Float
             as the specialty. This specialty item comes in the following flavors: <em>original, vanilla bean,
             chocolate, honeydew, strawberry, hazelnut, and pistachio</em>. We also have an assortment of cakes
             and pies available on display at the shop.
         </p>
+
+        <!-- Recipes Section -->
+        <h2 id="recipes">Recipes</h2>
+        <!-- I placed the recipe in an article tag so that the formatting matches with the new section
+        I also changed the p tags around ingredients and instructions to also match the formatting -->
+        <article>
+            <h3>No-Bake Cheesecake</h3>
+            <p>
+                This is one of Ms. Tomoe's favorite dishes and it's very simple to prepare.
+                <blockquote>"We recommend you eat it alongside some fruity tea. Our personal favorite is apricot tea; perfect for the spring!"</blockquote>
+            </p>
+            <section>
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>24oz. cream cheese</li>
+                    <li>1 1/3 cup granulated sugar</li>
+                    <li>1 cup sour cream</li>
+                    <li>1 tsp vanilla extract</li>
+                    <li>2 tsp lemon juice</li>
+                    <li>1 1/2 cups graham cracker crumbs</li>
+                    <li>5 tsb melted butter</li>
+                </ul>
+                <p>
+                    Let the ingredients sit until they are room temperature.<br>
+                    Cold ingredients will result in a chunky batter.
+                </p>
+            </section>
+            <section>
+                <h3>Instructions</h3>
+                <ol>
+                    <li>Mixed the crushed graham crackres with 1/3 cup granulated sugar and the melted butter.</li>
+                    <li>Mix until the mixture is even. The result will be thick, sandy, and coarse.</li>
+                    <li>Pack crust mixture tightly to the bottom of the pan.</li>
+                    <li>Beat the heavy cream in a bowl until stiff peaks form to create whipping cream.</li>
+                    <li>Beat all remaining ingradients in a separate bowl.</li>
+                    <li>Fold the whipping cream into the other bowl until the mixture is smooth.</li>
+                    <li>
+                        Refridgerate for 6-8 hours or overnight. Refridgerating for at least 12 hours will
+                        result in a sturdier cheesecake.
+                    </li>
+                    <li>Adt toppings.</li>
+                </ol>
+                Now your beautiful, simple cheesecake is ready to serve!
+            </section>
+        </article>
         
-        <h2>Location and Hours</h2>
-        <p>
-            Mitakihara, Japan<br>
-            Monday-Friday 8am-10pm<br>
-            Saturday 8am-8pm<br>
-            Sunday 10am-8pm<br>
-        </p>
-        
-        <h2>Contact</h2>
-        <p>
-            Phone Number: (999)-999-9999<br>
-            Email: service@charlottessweets.com<br>
-            Instagram: charlottessweets<br>
-            Twitter: charlottessweets<br>
-        </p>
+        <!-- News Section -->
+        <h2 id="latest-news">Lastest News</h2>
+        <!-- I changed the article titles to be h3 instead of h2 for a more cohesive look -->
+
+        <!-- article 1 -->
+        <!-- This article contains the requirements for the Summer Menu Items section in exercise 5-3 -->
+        <article>
+            <h3>Releasing a Cookbook</h3>
+            <header>
+                <p>
+                    <small><i><b>Posted by I. Tamaki, <time datetime="2020-09-18">September 18, 2020</time></b></i></small>
+                </p>
+            </header>
+            <section>
+                <h3>Background</h3>
+                <p>
+                    <cite>Charlotte's Sweets Shop</cite> is celebrating its <b><em>7 year anniversary</em></b> this year. This is an important
+                    number to Ms. Tomoe and the staff since it was at age 7 when Charlotte was diagnosed with an incurable illness and
+                    only a year later that she passed away. Although unfortunate, she created something special. A shop, a community, and
+                    delicious treats to share with the world. <q>This shop wouldn't exist without her. She is gone, but her
+                    memory still lives on</q> says Ms. Tomoe, the shop owner.
+                </p>
+                <p>
+                    We would like to honor her memory by releasing a cookbook filled with dishes, many of which were created by Charlotte.
+                    Although a child, Charlotte was <em>incredibly talented</em>, in fact, more talented than most adults in the art of
+                    baking and creating new recipes. I joined as a staff member 2 years ago, so I was not fortunate enough to have ever met
+                    Charlotte in person. However, I have heard many stories of what a lovely young girl she was, and I could only
+                    dream to have been able to meet such a wonderful person in my lifetime. Although I am quite new compared to
+                    the staff members who have been working here for nearly the entire time the shop has been opened, I have been
+                    treated as nothing but a close friend and family member in this community. This same love is poured into the
+                    desserts we serve. Many of the treats we sell are original dishes by Charlotte and we know many of you are
+                    excited to be able to create some of these dishes at home.
+                </p>
+                <p>
+                    The book titled <cite>A Taste of Charlotte</cite> will be released on <time datetime="2020-12-19">December 19, 2020</time>,
+                    the same day this shop opened 7 years ago. Please look forward to it!
+                </p>
+                
+            </section>
+            <section>
+                <h3>Featured Recipes</h3>
+                <p>
+                    The following are some of the recipes that will be available in the cookbook. We list the times we serve
+                    these items in our shop which is also the best time to eat this dessert!
+                </p>
+                <dl>
+                    <!-- The price has been changed to feature the season to best serve the dessert -->
+                    <dt><em>Signature Cheese Float</em></dt>
+                    <dd>
+                        The specialty item at our shop and Charlotte's personal favorite!
+                        <span class="season">(All year-round)</span>
+                    </dd>
+                    <br>
+
+                    <dt><em>Strawberry Cheesecake</em></dt>
+                    <dd>
+                        A creamy, fruity, delicious dessert!
+                        <span class="season">(All year-round)</span>
+                    </dd>
+                    <br>
+
+                    <dt><em>Lemon Square</em></dt>
+                    <dd>
+                        A light citrus tang that is perfect for the summer and Ms. Tomoe's favorite!
+                        <span class="season">(Summer)</span>
+                    </dd>
+                    <br>
+
+                    <dt class="new-item"><em>Tea Cookies &mdash; new item!</em></dt>
+                    <dd>
+                        A must have with a cup of black tea!
+                        <span class="season">(Spring)</span>
+                    </dd>
+                    <br>
+
+                    <dt class="new-item"><em>Taro Shaved Ice &mdash; new item!</em></dt>
+                    <dd>
+                        A cooling and refreshing dessert for a hot day!
+                        <span class="season">(Summer)</span>
+                    </dd>
+                </dl>
+            </section>
+
+            <p>
+                itamaki@charlottessweets.com <br>
+                (999)-999-9997
+            </p>
+        </article>
+
+        <!-- article 2 -->
+        <!-- This article contains all the requirements for exercise 5-2 -->
+        <article>
+            <h3>Opening a Sister Location</h3>
+            <header>
+                <p>
+                    <small><i><b>Posted by M. Tomoe, <time datetime="2020-09-16">September 16, 2020</time></b></i></small>
+                </p>
+            </header>
+            <p>
+                This week, the staff and business partners of <cite>Charlotte's Sweets Shop</cite> are excited to announce
+                our <b><em>expansion</em></b> into the fine dining business. We will be opening up a restaurant in <em><b>Kamihama city</b></em>
+                next month called <cite>Soul Gem</cite>. Our little shop has many talented members who are not only
+                well versed in baking, but in cooking delicious savory dishes. We hope that those of you living in
+                or visiting the Kamihama area will look out for our restaurant in the months to come.
+            </p>
+            <p>
+                This project is being led by our trusted staff member, Yachiyo Nanami, who has been with us for the past
+                five years. She is a skilled cook who specializes in <dfn>steamed</dfn> and <dfn>grilled</dfn> dishes.
+                On <time datetime="2020-09-26">September 26</time>, we will be hosting a celebration at <cite>Charlotte's Sweets
+                Shop</cite> to celebrate Yachiyo's fifth anniversary. Yachiyo is also taking this as an opportunity to invite
+                anyone who has questions about this project. <q>Those who have any questions about the project are free
+                to pop by and ask. We will be handing out free pastries to those who vists. Please visit us on that joyous day!</q>
+            </p>
+            <p>
+                mtomoe@charlottessweets.com <br>
+                (999)-999-9998
+            </p>
+            <p>
+                <small>
+                    Warning: Please do not visit the site of the new restaurant as it is still under construction. We would like to avoid
+                    any possible injuries that might occur to those who were not permitted on site and without the proper construction equipment.
+                </small>
+            </p>
+        </article>
+        <footer>
+            <div id="about">
+                <!-- I kept the location and hours together, but separated them from the contact information -->
+                <p>
+                    <b>Location and Hours</b><br>
+                    Mitakihara, Japan<br>
+                    Monday-Friday <time datetime="08:00">8am</time>-<time datetime="22:00">10pm</time><br>
+                    Saturday <time datetime="08:00">8am</time>-<time datetime="20:00">8pm</time><br>
+                    Sunday <time datetime="10:00">10am</time>-<time datetime="20:00">8pm</time><br>
+                </p>
+    
+                <p>
+                    <b>Contact</b><br>
+                    Phone Number: (999)-999-9999<br>
+                    Email: service@charlottessweets.com<br>
+                    Instagram: charlottessweets<br>
+                    Twitter: charlottessweets<br>
+                </p>
+            </div>
+
+            <small>
+                <i>All content copyright &copy; 2020, Charlotte's Sweets Shop</i>
+            </small>
+        </footer>
     </body>
 </html>
