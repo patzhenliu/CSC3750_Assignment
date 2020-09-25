@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- Exercise 8-4 (Table) -->
+<!-- Accessable using the link in the menu section on the home page -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <style>
+        body {
+            background-color: #fce0de;
+            margin: 0 10%;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-bottom: 1px solid #d1633c;
+            margin-top: 30px;
+        }
+        td, th {
+            border: 1px solid #d1633c;
+            width: 25%;
+        }
+        table {
+            border: 1px solid #d1633c;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Menu</h1>
+    <table>
+        <caption>
+            Here is a detailed list of the desserts we offer at our shop. It is detailed if each dessert contains nuts, animal products (vegan), and the price.
+        </caption>
+        <colgroup></colgroup>
+        <colgroup span="3"></colgroup>
+        <tr>
+            <th rowspan="2">Item Name</th>
+            <th colspan="2">Details</th>
+            <th rowspan="2">Price($)</th>
+        </tr>
+        <tr>
+            <th>Nuts(Y/N)</th>
+            <th>Vegan(Y/N)</th>
+        </tr>
+        <tr>
+            <th scope="row">Cheese Float</td>
+            <td>N</td>
+            <td>N</td>
+            <td>3.99</td>
+        </tr>
+        <tr>
+            <th scope="row">Cheesecake</td>
+            <td>N</td>
+            <td>N</td>
+            <td>4.49</td>
+        </tr>
+        <tr>
+            <th scope="row">Shaved Ice</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>5.99</td>
+        </tr>
+    </table>
+    <p><a href="index.html">[Back to Home Page]</a></p>
+</body>
+
+</html>
