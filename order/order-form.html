@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<!-- Exercise for Chapter 9 (Assignment 4) -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Charlotte's Sweets Shop: Desserts To-GO</title>
+    <style type="text/css">
+        ol,
+        ul {
+            list-style-type: none;
+        }
+        body {
+            background-color: #fce0de;
+            margin: 0 10%;
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-family: serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-bottom: 1px solid #d1633c;
+            margin-top: 30px;
+        }
+        legend {
+            color: #d1633c;
+            display: block;
+            font-size: 1.17em;
+            font-weight: bold;
+
+        }
+        fieldset fieldset legend {
+            color: #d1633c;
+            display: block;
+            font-size: 1em;
+            font-weight: bold;
+
+        }
+        fieldset {
+            border-color: #d1633c;
+            margin: 10px;
+        }
+        #caption, #buttons {
+            text-align: center;
+        }
+        input, textarea, button {
+            border: none;
+            margin: 4px 0;
+        }
+        .button {
+            background-color: #d1633c;
+            color: white;
+            height: 30px;
+            border: none;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Charlotte's Sweets Shop | Desserts To-Go</h1>
+
+    <p id="caption">
+       Have our delicious treats delivered right to your door!
+    </p>
+
+    <form action="thank-you.html" method="POST">
+        <!-- information section -->
+        <fieldset>
+            <legend>Your Information</legend>
+            <ul>
+                <li>
+                    <label for="info-name">Name:</label>
+                    <input type="text" name="customername" id="info-name">
+                </li>
+                <li>
+                    <label for="info-address">Address:</label>
+                    <input type="text" name="address" id="info-address">
+                </li>
+                <li>
+                    <label for="info-telephone">Telephone Number:</label>
+                    <input type="tel" name="telephone" id="info-telephone">
+                </li>
+                <li>
+                    <label for="info-email">Email:</label>
+                    <input type="email" name="email" id="info-email">
+                </li>
+                <li>
+                    <label for="info-instructions">Delivery instructions:</label><br>
+                    <textarea name="instructions" maxlength="400" rows="4" cols="60" id="info-instructions"
+                        placeholder="Type your delivery instructions here..."></textarea>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Customize Your Dessert</legend>
+            <!-- dessert section -->
+            <fieldset>
+                <legend>Dessert type <em>(Choose one)</em>:</legend>
+                <ul>
+                    <li><label><input type="radio" name="dessert" value="cheese-float"> Cheese Float</label></li>
+                    <li><label><input type="radio" name="dessert" value="cheesecake"> Cheesecake</label></li>
+                    <li><label><input type="radio" name="dessert" value="shaved-ice"> Shaved Ice</label></li>
+                    <li><label><input type="radio" name="dessert" value="smoothie"> Smoothie</label></li>
+                    <li><label><input type="radio" name="dessert" value="bubble-tes"> Bubble Tea</label></li>
+                    <li><label><input type="radio" name="dessert" value="soda-float"> Soda Float</label></li>
+                </ul>
+            </fieldset>
+            <!-- flavor section -->
+            <fieldset>
+                <legend>Flavor <em>(Choose as many as you want)</em>:</legend>
+                <ul>
+                    <li><label><input type="radio" name="flavor" value="original" checked> Original</label></li>
+                    <li><label><input type="radio" name="flavor" value="vanilla-bean"> Vanilla Bean</label></li>
+                    <li><label><input type="radio" name="flavor" value="chocolate"> Chocolate</label></li>
+                    <li><label><input type="radio" name="flavor" value="honeydew"> Honeydew</label></li>
+                    <li><label><input type="radio" name="flavor" value="strawberry"> Strawberry</label></li>
+                    <li><label><input type="radio" name="flavor" value="hazelnut"> Hazelnut</label></li>
+                    <li><label><input type="radio" name="flavor" value="pistachio"> Pistachio</label></li>
+                    <li><label><input type="radio" name="flavor" value="mango"> Mango</label></li>
+                    <li><label><input type="radio" name="flavor" value="lemon"> Lemon</label></li>
+                    <li><label><input type="radio" name="flavor" value="taro"> Taro</label></li>
+                </ul>
+            </fieldset>
+            <!-- toppings section -->
+            <fieldset>
+                <legend>Additional Toppings <em>(Choose as many as you want)</em>:</legend>
+                <ul>
+                    <li><label><input type="checkbox" name="toppings[]" value="taro-pearls"> Tapioca Pearls</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="pudding"> Pudding</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="grass-jelly"> Grass Jelly</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="mango-jelly"> Mango Jelly</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="lychee-jelly"> Lychee Jelly</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="red-bean"> Red Bean</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="taro-balls"> Taro Balls</label></li>
+                </ul>
+            </fieldset>
+            <!-- size section -->
+            <fieldset>
+                <legend>Size</legend>
+                <p>
+                    Pick a size:
+                    <select name="size" size="1">
+                        <option>Kid</option>
+                        <option>Small</option>
+                        <option>Regular</option>
+                        <option>Large</option>
+                        <option>X-Large</option>
+                    </select>
+                </p>
+            </fieldset>
+        </fieldset>
+
+        <p id="buttons">
+            <input class="button" type="submit" value="Submit Order">
+            <input class="button" type="reset">
+        </p>
+
+    </form>
+</body>
+
+</html>
